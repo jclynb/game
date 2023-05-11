@@ -78,6 +78,9 @@ void Application::loop() {
     update();
     checkcollisions();
     draw();
+    if (enemies.empty()) {
+      // display "you win" message
+    }
   }
 }
 
@@ -138,10 +141,11 @@ void Application::checkcollisions() {
   for (int i = 0; i < lasers.size(); i++) {
     for (int j = 0; j < enemies.size(); j++) {
       if (intersection(lasers[i], enemies[i])) {
-        lasers.erase(lasers.begin() + i);
-        i--;
         enemies.erase(enemies.begin() + j);
+        lasers.erase(lasers.begin() + i);
         j--;
+        i--;
+        break;
       }
     }
   }
