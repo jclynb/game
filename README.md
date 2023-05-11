@@ -1,7 +1,7 @@
 
 # 🚨 Gamer alert  🚨
 
-Shoot three blocks and you win!
+Shoot three blocks and that's it! A work-in-progress.
 
 
 
